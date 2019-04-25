@@ -68,6 +68,7 @@ public class RepositoryEvent {
 		REVIEW_REQUESTED("review_requested"),
 		HEAD_REF_FORCE_PUSHED("head_ref_force_pushed"),
 		BASE_REF_FORCE_PUSHED("base_ref_force_pushed"),
+		MARKED_AS_DUPLICATE("marked_as_duplicate"),
 		READY_FOR_REVIEW("ready_for_review");
 
 		private String type;
