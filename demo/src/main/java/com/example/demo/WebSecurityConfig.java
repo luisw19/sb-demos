@@ -30,6 +30,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
 				.antMatchers("/events/**").hasRole("USER")
 				.antMatchers("/**").permitAll()
+				.antMatchers("/h2-console/**").permitAll()
+				.and()
+				.csrf().ignoringAntMatchers("/h2-console/**")
+				.and()
+				.headers().frameOptions().disable()
 				.and().httpBasic();
 	}
 }
